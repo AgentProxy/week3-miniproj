@@ -1,0 +1,42 @@
+.grid-container{
+    display: grid;
+    grid-template: repeat(12,1fr) / repeat(3,fr);
+    height: 100%;
+    grid-template-areas: 
+    "n n n n n n n n n n n n"
+    "c c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+#navbar{
+    background-color: white;
+    grid-area: n;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    border-bottom: solid red 5px;
+    color: grey;
+}
+
+#navbar > ul{
+    list-style-type: none;
+}
+
+#navbar li{
+    display: inline-block;
+}
+
+#carousel{
+    background-color: green;
+    grid-area: c;
+}
+
+#footer{
+    background-color: yellow;
+    grid-area: f;
+}
